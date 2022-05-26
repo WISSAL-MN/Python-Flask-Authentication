@@ -51,5 +51,30 @@ Issue Tracker: https://github.com/wtforms/flask-wtf/issues/
 
 Chat: https://discord.gg/pallets
 
-      
+# Flask-SQLAlchemy 2.5.1 :
+Flask-SQLAlchemy is an extension for Flask that adds support for SQLAlchemy to your application. It aims to simplify using SQLAlchemy with Flask by providing useful defaults and extra helpers that make it easier to accomplish common tasks.
+
+# Installation :
+                $ pip install -U Flask-SQLAlchemy
+                
+# Usage:
+
+                from flask import Flask
+                from flask_sqlalchemy import SQLAlchemy
+
+                app = Flask(__name__)
+                app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///example.sqlite"
+                db = SQLAlchemy(app)
+
+
+                class User(db.Model):
+                    id = db.Column(db.Integer, primary_key=True)
+                    username = db.Column(db.String, unique=True, nullable=False)
+                    email = db.Column(db.String, unique=True, nullable=False)
+
+
+                db.session.add(User(name="Flask", email="example@example.com"))
+                db.session.commit()
+
+                users = User.query.all()
       
