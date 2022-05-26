@@ -103,3 +103,19 @@ Flask-SQLAlchemy is an extension for Flask that adds support for SQLAlchemy to y
  
  Chat: https://discord.gg/pallets
       
+# Flask-Login 0.6.1 :
+Flask-Login provides user session management for Flask. It handles the common tasks of logging in, logging out, and remembering your users' sessions over extended periods of time.
+
+
+# Installation :
+                  $ pip install flask-login
+                  
+>https://pypi.org/project/Flask-Login/
+>https://flask-login.readthedocs.io/en/latest/
+
+
+# usage :
+            from flask_login import LoginManager
+            login_manager = LoginManager()
+
+            login_manager.init_app(app)
