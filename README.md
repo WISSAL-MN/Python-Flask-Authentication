@@ -1,7 +1,7 @@
 # Python-Flask-Authentication
 Python Flask Authentication
 
-# Usage
+# Usage :
 Windows :
 
       python app.py
@@ -59,22 +59,47 @@ Flask-SQLAlchemy is an extension for Flask that adds support for SQLAlchemy to y
                 
 # Usage:
 
-                from flask import Flask
-                from flask_sqlalchemy import SQLAlchemy
+      from flask import Flask
+      from flask_sqlalchemy import SQLAlchemy
 
-                app = Flask(__name__)
-                app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///example.sqlite"
-                db = SQLAlchemy(app)
-
-
-                class User(db.Model):
-                    id = db.Column(db.Integer, primary_key=True)
-                    username = db.Column(db.String, unique=True, nullable=False)
-                    email = db.Column(db.String, unique=True, nullable=False)
+      app = Flask(__name__)
+      app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///example.sqlite"
+      db = SQLAlchemy(app)
 
 
-                db.session.add(User(name="Flask", email="example@example.com"))
-                db.session.commit()
+      class User(db.Model):
+          id = db.Column(db.Integer, primary_key=True)
+          username = db.Column(db.String, unique=True, nullable=False)
+          email = db.Column(db.String, unique=True, nullable=False)
 
-                users = User.query.all()
+
+      db.session.add(User(username="Flask", email="example@example.com"))
+      db.session.commit()
+
+      users = User.query.all()
+                
+ # LINKS :
+ 
+ Documentation: https://flask-sqlalchemy.palletsprojects.com/
+ 
+ 
+ Changes: https://flask-sqlalchemy.palletsprojects.com/changes/
+ 
+ 
+ PyPI Releases: https://pypi.org/project/Flask-SQLAlchemy/
+ 
+ 
+ Source Code: https://github.com/pallets/flask-sqlalchemy/
+ 
+ 
+ Issue Tracker: https://github.com/pallets/flask-sqlalchemy/issues/
+ 
+ 
+ Website: https://palletsprojects.com/
+ 
+ 
+ Twitter: https://twitter.com/PalletsTeam
+ 
+ 
+ Chat: https://discord.gg/pallets
       
